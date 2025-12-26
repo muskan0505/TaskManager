@@ -1,0 +1,152 @@
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #777;
+  --border: #ddd;
+  --primary: #4f46e5;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #334155;
+  --primary: #6366f1;
+}
+
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- LAYOUT ---------- */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 380px;
+  background: var(--card);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ---------- INPUT ---------- */
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.input-group button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ---------- TASK LIST ---------- */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark .task-item {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.task-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+/* ---------- EMPTY ---------- */
+.empty {
+  text-align: center;
+  color: var(--muted);
+}
+/* ---------- GLOBAL ---------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* ---------- CENTER CONTAINER ---------- */
+.app-container {
+  min-height: 100vh;
+  width: 100vw;                 /* 👈 important */
+  display: flex;
+  justify-content: center;      /* horizontal center */
+  align-items: center;          /* vertical center */
+  background: var(--bg);
+}
+
+
+.card {
+  width: 380px;
+  max-width: 90%;
+  background: var(--card);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
